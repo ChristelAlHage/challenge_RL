@@ -276,7 +276,7 @@ class StudentGymEnv(gym.Env):
             logger.error(f"Failed to reset episode {self.episode_id}: {e}")
             raise RuntimeError(f"Could not reset episode: {str(e)}")
 
-    def step(self, action: int, step_size: Optional[int] = 10, return_all_states: bool = False) -> Tuple[np.ndarray, float, bool, bool, Dict]:
+    def step(self, action: int, step_size: Optional[int] = 10, return_all_states: bool = True) -> Tuple[np.ndarray, float, bool, bool, Dict]:
         """
         Take a step in the environment.
 

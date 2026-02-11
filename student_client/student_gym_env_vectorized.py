@@ -311,7 +311,7 @@ class StudentGymEnvVectorized(gym.Env):
             logger.error(f"Failed to reset environments: {e}")
             raise RuntimeError(f"Could not reset environments: {str(e)}")
 
-    def step(self, actions: np.ndarray, step_size: Optional[int] = None, return_all_states: Optional[bool] = None) -> \
+    def step(self, actions: np.ndarray, step_size: Optional[int] = None, return_all_states: Optional[bool] = True) -> \
     Tuple[Union[np.ndarray, List[np.ndarray]], np.ndarray, np.ndarray, np.ndarray, List[Dict]]:
         """
         Take a step in all environments.

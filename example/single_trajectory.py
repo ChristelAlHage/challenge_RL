@@ -27,7 +27,7 @@ def main():
             action=action
         )
 
-        observations.append(obs_result.flatten())
+        observations.append(obs_result)
         actions.append(action)
 
         rewards.append(reward)
