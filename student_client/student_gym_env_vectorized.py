@@ -40,7 +40,7 @@ class StudentGymEnvVectorizedConfig(BaseModel):
     step_size: int = 10  # Number of simulation steps to compute per environment step
     return_all_states: bool = True  # Return observations for all steps in step_size
 
-CLIENT_VERSION = "0.2"
+CLIENT_VERSION = "0.3"
 
 class StudentGymEnvVectorized(gym.Env):
     """
@@ -667,7 +667,7 @@ def create_student_gym_env_vectorized(
         auto_reset: bool = True,
         timeout: float = 30.0,
         prod: bool = True,
-        step_size: int = 1,
+        step_size: int = 10,
         return_all_states: bool = True,
         episode_ids: Optional[List[str]] = None,
         session_id: Optional[str] = None
